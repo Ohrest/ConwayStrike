@@ -1,0 +1,44 @@
+.App {
+  text-align: left;
+
+}
+
+body {
+  width:1920px;
+  height:800px;
+  background-color: #292e3a;
+  color: rgb(219, 209, 209);
+  font-size:16px;
+}
+
+.Board {
+  float:left;
+  position: relative;
+  margin: 0 auto;
+  background-color: #292e3a;
+  background-image: linear-gradient(rgb(112, 104, 104) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(112, 104, 104) 1px, transparent 1px);
+}
+
+.Cell {
+  background: #ccc;
+  position: absolute;
+}
+
+.Form1 {
+    width: 100%;
+}
+.chat-sidebar {
+    margin-left: 1600px;
+    /*height: 800px;*/
+    background-color: #292e3a;
+    
+}
+
+.messageList{
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  /*display: flex;*/
+  flex-direction: column-reverse;
+}
