@@ -15,18 +15,21 @@ class ChatBox extends Component {
 
   componentDidMount() {
     this.props.passSocket.on("updatedMessages", data => this.setState({ messages: data }) );
-    this.props.passSocket.emit("newMessage", {
-      messageEmitted: "New user connected"
-    });
   }
 
   handleSubmit(event) {
     event.preventDefault();
     if (this.state.message.length > 0 && this.state.message.length < 100)
+    {
+      //this.props.passSocket.emit("newMessage", this.state.message);
+
       this.props.passSocket.emit("newMessage", {
-        messageEmitted: this.state.message
+        messageEmitted: this.state.message,
+        teamAssigned: this.props.teamAssigned
       });
+
     this.setState({ message: "" });
+    }
   }
 
   handleChange(event) {
@@ -45,9 +48,14 @@ class ChatBox extends Component {
               </tr>
             </thead>
             <tbody>
+              
               {this.state.messages.map(txt => (
-                <tr>{txt}</tr>
+                //<tr style={{color: txt.teamAssigned==1 ? 'rgb(60,20,255)': 'rgb(255,20,60)'}} >
+                <tr style={{color: txt.teamAssigned==0 ? 'rgb(255,255,255)' : txt.teamAssigned==1 ? 'rgb(60,20,255)': 'rgb(255,20,60)'}} >
+                {txt.messageEmitted}
+                </tr>
               ))}
+              
             </tbody>
           </Table>
         </div>

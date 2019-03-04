@@ -5,7 +5,7 @@
 
 body {
   width:1920px;
-  height:800px;
+  height:900px;
   background-color: #292e3a;
   color: rgb(219, 209, 209);
   font-size:16px;
@@ -21,7 +21,8 @@ body {
 }
 
 .Cell {
-  background: #ccc;
+  /*background: #ccc;*/
+  background: rgb(250, 251, 252);
   position: absolute;
 }
 
@@ -41,4 +42,21 @@ body {
   overflow: scroll;
   /*display: flex;*/
   flex-direction: column-reverse;
+}
+
+
+
+.imgFlag {
+    transition: 5s;
+    opacity: 50;
+    transform: scale(3) rotate(5000deg);
+}
+.imgFlag:hover {
+  transition: 5s;
+    opacity: 50;
+    transform: scale(3) rotate(5000deg);
+}
+
+.imgEmpty {
+  
 }
