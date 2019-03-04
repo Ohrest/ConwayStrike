@@ -1,8 +1,8 @@
-# Multiplayer implementation of John Conway's game of life
+# ConwayStrike, a multiplayer game-like implementation of John Conway's game of life
 
 ![Loading screenshot](public/Images/screenshot.png?raw=true "Screenshot")
 
-Simple Browser-based multi-player Conway's game of life version where you need to "shoot" gliders at your enemy's flag to win, all users see and interact with the same board. Front-end is built in ReactJS, Backend's server in Node.js and Socket.io for real-time updates.
+Browser-based multi-player Conway's game of life version where you need to "shoot" gliders at your enemy's flag to win, all users see and interact with the same board. Front-end is built in ReactJS, Backend's server in Node.js and Socket.io for real-time updates.
 
 The original Conway's game of life's point was to investigate how complex structures can emerge from a simple set of rules, the original is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.
 
@@ -15,4 +15,3 @@ Running live at: http://www.gameoflife.live/
 
 
 More info about [John Conway's game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
-# CounterConway
